@@ -1,0 +1,22 @@
+	.nva li{
+			float: left;
+			line-height: 30px;
+			height: 30px;
+			width: 80px;
+			list-style: none;
+			border: 1px solid red;
+			text-align: center;
+			background-color: blue;
+
+		}
+		.nva li a{
+			text-decoration: none;
+			color: red;
+		}
+		.nva li:hover{
+			background-color: green;
+		}
+		.boss{
+			margin: 0 auto;
+			width: 500px;
+		}

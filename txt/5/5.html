@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div><img src="images/1.jpg" alt="" id="pic"></div>
+	<div>
+	<input type="button" class="but" value="1">
+	<input type="button" class="but" value="2">
+	<input type="button" class="but" value="3">
+	<input type="button" class="but" value="4">
+	<input type="button" class="but" value="5">
+	</div>
+	<script>
+	var nam = [
+		"images/1.jpg",
+		"images/2.jpg",
+		"images/3.jpg",
+		"images/4.jpg",
+		"images/5.jpg"
+	]
+	var images =document.getElementById("pic")
+	var button = document.getElementsByClassName("but")
+	for(var i = 0;i < button.length;i++){
+		button[i].onclick = function(){
+		var num	= getindex(this)
+		images.src = nam[num]
+		}
+	}
+	function getindex(obj){
+			var parent = obj.parentNode;//找到obj形参的父级
+			var child = parent.children;//找到父级下面的子级
+			for (var i=0;i<child.length;i++) {
+				if(child[i] === obj){
+					return i//遍历子级与obj形参比较返回i值
+				}
+			}
+		}
+	</script>	
+</body>
+</html>
